@@ -197,7 +197,7 @@ stopFetching = false;
 peristiwaThread = new Thread(() -> {
 try {
 txtAreaPeristiwa.setText("Tunggu, sedang mengambil data...\n");
-helper.getPeristiwaBarisPerBaris(ulangTahunBerikutnya,txtAreaPeristiwa, () -> stopFetching);
+helper.getPeristiwaBarisPerBaris(ulangTahunBerikutnya, txtAreaPeristiwa, () -> stopFetching);
 if (!stopFetching) {
 javax.swing.SwingUtilities.invokeLater(() ->
 txtAreaPeristiwa.append("Selesai mengambil data peristiwa"));
